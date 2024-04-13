@@ -1,9 +1,10 @@
+// LoginPage.js
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Validation from './LoginValidation';
 
 function LoginPage() {
-    const initialValues = { emailInput: "", passInput: "" };
+    const initialValues = { email: "", password: "" };
     const [formValues, setFormValues] = useState(initialValues);
     const [formErrors, setFormErrors] = useState({});
     const [isSubmit, setIsSubmit] = useState(false);
@@ -35,18 +36,22 @@ function LoginPage() {
                 <h1>Login</h1>
                 <div className="email">
                     <label htmlFor='emailInput'>Email</label>
-                    <input type='email' id="emailInput" name="emailInput" placeholder='Enter Email' value={formValues.emailInput} onChange={handleInput}></input>
+                    <input type='email' id="emailInput" name="email" placeholder='Enter Email' value={formValues.email} onChange={handleInput}></input>
                 </div>
-                <p> {formErrors.emailInput}</p>
+
                 <div className="password">
                     <label htmlFor='passInput'>Password</label>
-                    <input type='password' id="passInput" name="passInput" placeholder='Enter Password' value={formValues.passInput} onChange={handleInput}></input>
+                    <input type='password' id="passInput" name="password" placeholder='Enter Password' value={formValues.password} onChange={handleInput}></input>
                 </div>
-                <p> {formErrors.passInput}</p>
+                <div className="errorMessages">
+                    {formErrors.email && <p>{formErrors.email}</p>}
+                    {formErrors.password && <p>{formErrors.password}</p>}
+                </div>
                 <div className="lButtons">
                     <Link to="/register">Register</Link>
                     <button type='submit'>Login</button>
                 </div>
+
             </form>
         </div>
     );
