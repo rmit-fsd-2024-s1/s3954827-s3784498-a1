@@ -1,4 +1,3 @@
-// LoginPage.js
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Validation from './LoginValidation';
@@ -27,7 +26,7 @@ function LoginPage() {
         if (Object.keys(formErrors).length === 0 && isSubmit) {
             console.log(formValues);
         }
-    }, [formErrors]);
+    }, [formErrors, isSubmit, formValues]);
 
     return (
         <div className="formContainer">
