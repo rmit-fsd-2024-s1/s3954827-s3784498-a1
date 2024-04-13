@@ -1,15 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Routes
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
 import LoginPage from "./components/LoginPage";
-import RegisterPage from "./components/Registerpage"; // Assuming RegisterPage is in the components directory
+import RegisterPage from "./components/Registerpage"; 
+import MainPage from "./components/Main"; 
 import './App.css';
 
 function App() {
   return (
     <Router>
-      <Routes> {/* Wrap Routes around Route components */}
-        <Route path='/' element={<LoginPage />} /> {/* Use element prop to specify the component */}
-        <Route path='/register' element={<RegisterPage />} /> {/* Use element prop to specify the component */}
+      <Routes> 
+        <Route path='/' element={<LoginPage />} /> 
+        <Route path='/register' element={<RegisterPage />} /> 
+        <Route path='/main' element={<MainPage />} /> 
       </Routes>
     </Router>
   );
