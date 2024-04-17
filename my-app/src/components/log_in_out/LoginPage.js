@@ -30,7 +30,6 @@ function LoginPage() {
 
     return (
         <div className="formContainer">
-            <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
             <form className='loginForm' onSubmit={handleSubmit}>
                 <h1>Login</h1>
                 <div className="email">

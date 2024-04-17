@@ -29,7 +29,7 @@
   }
   
   .app-background {
-    background-color: #D2B48C;
+    background-color: #D2B48C; /*surely #64d164*/
     min-height: 120vh; /* Ensure the background color extends to at least the full height of the viewport */
   }
   
