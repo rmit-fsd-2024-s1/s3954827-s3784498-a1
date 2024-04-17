@@ -30,7 +30,7 @@
   
   .app-background {
     background-color: #D2B48C;
-    min-height: 100vh; /* Ensure the background color extends to at least the full height of the viewport */
+    min-height: 120vh; /* Ensure the background color extends to at least the full height of the viewport */
   }
   
   @keyframes App-logo-spin {

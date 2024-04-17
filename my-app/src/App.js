@@ -12,6 +12,8 @@ import NavBar from './components/navbar/Navbar.js';
 import Header from './components/header/Header.js';
 import './components/navbar/Navbar.css'; // Import the CSS file from the 'NavBar' folder
 import Footer from './components/footer/Footer.js';
+import Register from './pages/Register.js';
+import SignIn from './pages/SignIn.js';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path='/Register' element={<Register/>} />
+        <Route path='/SignIn' element={<SignIn/>} />
       </Routes>
       <Footer/>
       </div>
