@@ -1,7 +1,7 @@
 // SignIn.js
 import {React, useState, useEffect} from 'react';
 import './SignIn.css';
-import graphicSVG from '../components/images/graphicSVG.svg'; // Import your SVG file
+import graphicSVG from '../components/images/signin.svg'; // Import your SVG file
 import Validation from '../components/log_in_out/LoginValidation';
 
 const SignIn = () => {
