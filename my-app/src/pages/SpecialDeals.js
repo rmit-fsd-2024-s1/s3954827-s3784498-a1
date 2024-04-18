@@ -1,33 +1,32 @@
 // Contact.js
 import React from 'react';
 import placeholderImage from '../components/images/placeholder.png';
+import Carousel from '../components/carousel/carousel.js'
+import './SpecialDeals.css'
 
 const SpecialDeals = () => {
     return (
         <div className="container">
-            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img className="d-block w-100" src={placeholderImage} alt="First slide" />
-                    </div>
-                    <div className="carousel-item">
-                        <img className="d-block w-100" src={placeholderImage} alt="Second slide" />
-                    </div>
-                    <div className="carousel-item">
-                        <img className="d-block w-100" src={placeholderImage} alt="Third slide" />
-                    </div>
-                </div>
-                <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Previous</span>
-                </a>
-                <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Next</span>
-                </a>
+            <h1 className='heading-1'> Special Deals! </h1>
+            <div className='carousel-center'><Carousel/></div>
+            <div className='deal-info'>
+            <h2 className='heading-two'> Our specials for this week:</h2>
+            {/* NOTE: The below list / specials will need to be updated from LocalStorage */}
+            <ul className='list-1'>
+                <li>
+                    Potatoes
+                </li>
+                <li>
+                    Carrots
+                </li>
+                <li>
+                    Tunips
+                </li>
+            </ul>
             </div>
         </div>
     );
 }
 
 export default SpecialDeals;
+
