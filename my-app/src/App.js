@@ -4,7 +4,7 @@ import './App.css';
 // Importing page components
 import Home from './pages/Home'
 import About from './pages/About';
-import Contact from './pages/Contact';
+import SpecialDeals from './pages/SpecialDeals.js';
 import NavBar from './components/navbar/Navbar.js';
 import Header from './components/header/Header.js';
 import './components/navbar/Navbar.css'; // Import the CSS file from the 'NavBar' folder
@@ -21,7 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/SpecialDeals" element={<SpecialDeals />} />
         <Route path='/Register' element={<Register/>} />
         <Route path='/SignIn' element={<SignIn/>} />
       </Routes>

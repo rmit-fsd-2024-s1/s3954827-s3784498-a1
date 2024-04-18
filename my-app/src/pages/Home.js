@@ -6,6 +6,7 @@ import placeholderImage from '../components/images/placeholder.png';
 function Home() {
   return (
     <div className="home-container">
+      <h1 className='slogan'>Explore our range of organic treasures, meticulously crafted to nourish both body and soul.</h1>
       <div className="image-container">
         <img src={placeholderImage} alt="Image 1" className="home-image" />
         <img src={placeholderImage} alt="Image 2" className="home-image" />

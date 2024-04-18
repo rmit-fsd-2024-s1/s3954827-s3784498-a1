@@ -34,7 +34,7 @@ const SignIn = () => {
     <div className="login-container">
       <div className="left-section">
         <br/>
-        <h2 className='slogan'>Nature's goodness, delivered to your doorstep.</h2>
+        <h2 className='slogan'>Cultivating a healthier tomorrow, one login at a time.</h2>
         <br/><br/><br/>
         <div className="left-bottom-section">
         <img src={graphicSVG} alt="Graphic" className="graphic-image" />
