@@ -16,11 +16,18 @@
     color: white;
   }
   
- 
-  
   .app-background {
-    background-color: #D2B48C; /*surely #64d164*/
-    min-height: 120vh; /* Ensure the background color extends to at least the full height of the viewport */
+    background-color: #D2B48C; 
+    min-height: 160vh; 
+    width:100%;
   }
   
- 
+  body{
+    height:100%;
+    width:100%;
+}
+
+/*The below code fixes sizing issue where background would not fill*/
+html{
+  background-color: #D2B48C; 
+}

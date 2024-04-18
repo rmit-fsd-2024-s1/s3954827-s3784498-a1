@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
-import placeholderImage from '../images/placeholder.png';
-import logo from '../images/soilLogo3.png';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'bootstrap'; // Import Bootstrap carousel functionality
 import './carousel.css'; // Import the CSS file
+import potato from '../images/potato.jpg'
+import veggies from '../images/veggies.jpg'
+import tableveggies from '../images/tableveggies.jpg'
 
 
 
@@ -32,13 +34,13 @@ const CarouselComponent = () => {
           </div>
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src={placeholderImage} className="d-block w-100" alt="..." />
+              <img src={potato} className="d-block w-100" alt="..." />
             </div>
             <div className="carousel-item">
-              <img src={logo} className="d-block w-100" alt="..." />
+              <img src={veggies} className="d-block w-100" alt="..." />
             </div>
             <div className="carousel-item">
-              <img src={placeholderImage} className="d-block w-100" alt="..." />
+              <img src={tableveggies} className="d-block w-100" alt="..." />
             </div>
           </div>
           <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
