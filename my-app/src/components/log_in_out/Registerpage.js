@@ -1,9 +1,11 @@
-import React, { useState , useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Validation from './RegisterValidation';
+import clean from './cleanSlate';
 
 function RegisterPage() {
-    const initialValues = { username: "", email: "", password: "" };
+    clean();
+    const initialValues = { username: "", email: "", password: ""};
     const [formValues, setFormValues] = useState(initialValues);
     const [formErrors, setFormErrors] = useState({});
     const [isSubmit, setIsSubmit] = useState(false);
@@ -20,7 +22,7 @@ function RegisterPage() {
         setFormErrors(Validation(formValues));
         setIsSubmit(true);
     }
-
+    
     useEffect(() => {
       console.log(formErrors);
       if (Object.keys(formErrors).length === 0 && isSubmit) {
