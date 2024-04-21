@@ -18,11 +18,12 @@
 }
 
 .navbar ul li a {
-  color: #fff;
+  color: #E9DCC9;
   text-decoration: none;
   padding: 10px 15px;
   border-radius: 15px;
   transition: background-color 0.3s ease;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .navbar-right .navbar-button {
@@ -34,7 +35,7 @@
 }
 
 .navbar-button {
-  color: #fff;
+  color: #F9F6EE;
   background-color: #51829B; /* Example color for Register button */
   border: none;
   padding: 10px 20px;
@@ -42,6 +43,8 @@
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 540;
 }
 
 .navbar-button:last-child {

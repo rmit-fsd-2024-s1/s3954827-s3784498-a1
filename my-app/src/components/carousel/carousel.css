@@ -1,0 +1,28 @@
+.carousel-item{
+    border: solid 2px #333;
+    border-radius: 4px;
+    
+}
+
+.carousel-main{
+    width:400px 
+}
+
+/* Inverting the filter so the buttons can be black 
+*/
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(1);
+}
+
+.carousel-indicators{
+
+    filter:invert(1);
+}
+
+
+.carousel-center{
+    justify-content: center;
+    display: flex;
+    
+  }

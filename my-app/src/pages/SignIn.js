@@ -1,7 +1,7 @@
 // SignIn.js
 import {React, useState, useEffect} from 'react';
 import './SignIn.css';
-import graphicSVG from '../components/images/graphicSVG.svg'; // Import your SVG file
+import graphicSVG from '../components/images/signin.svg'; // Import your SVG file
 import LValidation from '../components/log_in_out/LoginValidation';
 import clean from '../components/log_in_out/cleanSlate';
 
@@ -35,7 +35,7 @@ const SignIn = () => {
     <div className="login-container">
       <div className="left-section">
         <br/>
-        <h2 className='slogan'>Nature's goodness, delivered to your doorstep.</h2>
+        <h2 className='slogan'>Cultivating a healthier tomorrow, one login at a time.</h2>
         <br/><br/><br/>
         <div className="left-bottom-section">
         <img src={graphicSVG} alt="Graphic" className="graphic-image" />
