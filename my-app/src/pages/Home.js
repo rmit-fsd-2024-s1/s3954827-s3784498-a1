@@ -17,8 +17,8 @@ function Home() {
         <img src={lettuce} alt="Image 4" className="home-image" />
       </div>
       <div className="text-container">
-        <p>This is the first paragraph of text.</p>
-        <p>This is the second paragraph of text.</p>
+        <p>Welcome to our organic paradise, where every product is a labor of love. From farm to table, we are committed to delivering the freshest, most flavorful produce straight to your door. Dive into a world of vibrant colors, tantalizing aromas, and unbeatable nutrition, and join us on a journey to better health and well-being.</p>
+        <p>At our farm, sustainability isn't just a buzzword—it's a way of life. We prioritize eco-friendly farming practices, minimize waste, and prioritize biodiversity to ensure a healthier planet for generations to come. With every purchase, you're not just supporting local agriculture, but also contributing to a greener, more sustainable future for all.</p>
       </div>
     </div>
   );

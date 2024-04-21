@@ -5,7 +5,7 @@ import './Footer.css';  // Import the CSS file for the footer styles
 function Footer() {
   return (
     <footer className='footer-container'>
-      <p>This is the footer content.</p>
+      <p>Created by Joshua Escaran & Ryan D'Mello</p>
     </footer>
   );
 }
