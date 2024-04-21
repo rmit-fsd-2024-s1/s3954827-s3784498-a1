@@ -1,6 +1,9 @@
-function Validation(values){
+function LValidation(values){
     const errors = {};
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    const logData = JSON.parse(localStorage.getItem(values.email));
+
+    //gotta add a function that deletes currentUser
 
     if (!values.email) {
         errors.email = "Email is required";
@@ -15,12 +18,22 @@ function Validation(values){
     } else if (values.password.length > 30) { 
         errors.password = "Password must not be more than 30 characters long";
     }
-    
-    if (Object.keys(errors).length === 0) {
-        return { success: "No errors found" };
-    }
 
+    if (logData) {
+        const {email, password } = logData;
+    
+        if (email !== values.email) {
+            errors.email = "Email doesnt exist";
+        }
+        if (password !== values.password) {
+            errors.password = "Password doesnt exist";
+        }else if(email === values.email && password === values.password){
+            localStorage.setItem("currentUser", JSON.stringify(logData));
+            return {success: "user logged in"};
+        }
+    } 
+    
     return errors;
 }
 
-export default Validation;
+export default LValidation;

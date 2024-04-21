@@ -11,8 +11,11 @@ import './components/navbar/Navbar.css'; // Import the CSS file from the 'NavBar
 import Footer from './components/footer/Footer.js';
 import Register from './pages/Register.js';
 import SignIn from './pages/SignIn.js';
+import clean from './components/log_in_out/cleanSlate.js';
 
 function App() {
+
+  clean();
   return (
     <Router>
       <div className="app-background">

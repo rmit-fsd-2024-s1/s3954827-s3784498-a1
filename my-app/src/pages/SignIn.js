@@ -2,10 +2,10 @@
 import {React, useState, useEffect} from 'react';
 import './SignIn.css';
 import graphicSVG from '../components/images/signin.svg'; // Import your SVG file
-import Validation from '../components/log_in_out/LoginValidation';
+import LValidation from '../components/log_in_out/LoginValidation';
+import clean from '../components/log_in_out/cleanSlate';
 
 const SignIn = () => {
-
   const initialValues = { email: "", password: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
@@ -20,7 +20,7 @@ const SignIn = () => {
 
   const handleSubmit = (e) => {
       e.preventDefault();
-      setFormErrors(Validation(formValues));
+      setFormErrors(LValidation(formValues));
       setIsSubmit(true);
   }
 
@@ -30,6 +30,7 @@ const SignIn = () => {
           console.log(formValues);
       }
   }, [formErrors, isSubmit, formValues]);
+
   return (
     <div className="login-container">
       <div className="left-section">

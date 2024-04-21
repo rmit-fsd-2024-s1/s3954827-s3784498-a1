@@ -9,7 +9,6 @@ function Register() {
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
-  const keysToCheck = ['username', 'email', 'password'];
 
   const handleInput = (e) => {
       setFormValues(prev => ({
@@ -20,7 +19,7 @@ function Register() {
 
   const handleSubmit = (e) => {
       e.preventDefault();
-      setFormErrors(Validation(formValues, keysToCheck));
+      setFormErrors(Validation(formValues));
       setIsSubmit(true);
   }
 
