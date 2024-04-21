@@ -11,18 +11,20 @@ import './components/navbar/Navbar.css'; // Import the CSS file from the 'NavBar
 import Footer from './components/footer/Footer.js';
 import Register from './pages/Register.js';
 import SignIn from './pages/SignIn.js';
-import clean from './components/log_in_out/cleanSlate.js';
+// import clean from './components/log_in_out/cleanSlate.js';
+// import EditProf from './components/log_in_out/editProf.js';
 
 function App() {
 
-  clean();
+  // clean();
   return (
     <Router>
       <div className="app-background">
       <Header/>
      <NavBar/>
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} /> */}
+        {/* <Route path="/" element={<EditProf />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/SpecialDeals" element={<SpecialDeals />} />
         <Route path='/Register' element={<Register/>} />

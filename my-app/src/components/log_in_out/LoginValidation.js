@@ -29,7 +29,7 @@ function LValidation(values){
             errors.password = "Password doesnt exist";
         }else if(email === values.email && password === values.password){
             localStorage.setItem("currentUser", JSON.stringify(logData));
-            return {success: "user logged in"};
+            window.alert("User logged in sucessfully!!");
         }
     } 
     
