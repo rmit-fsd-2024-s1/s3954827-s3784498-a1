@@ -12,7 +12,7 @@ import Footer from './components/footer/Footer.js';
 import Register from './pages/Register.js';
 import SignIn from './pages/SignIn.js';
 // import clean from './components/log_in_out/cleanSlate.js';
-// import EditProf from './components/log_in_out/editProf.js';
+import EditProf from './components/log_in_out/editProf.js';
 
 function App() {
 
@@ -23,8 +23,8 @@ function App() {
       <Header/>
      <NavBar/>
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
-        {/* <Route path="/" element={<EditProf />} /> */}
+        <Route path="/" element={<Home />} />
+        <Route path="/edit" element={<EditProf />} />
         <Route path="/about" element={<About />} />
         <Route path="/SpecialDeals" element={<SpecialDeals />} />
         <Route path='/Register' element={<Register/>} />

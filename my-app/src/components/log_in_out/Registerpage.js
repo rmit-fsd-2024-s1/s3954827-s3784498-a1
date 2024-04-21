@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Validation from './RegisterValidation';
+import { useNavigate } from 'react-router-dom';
 import clean from './cleanSlate';
 
 function RegisterPage() {
@@ -9,6 +10,7 @@ function RegisterPage() {
     const [formValues, setFormValues] = useState(initialValues);
     const [formErrors, setFormErrors] = useState({});
     const [isSubmit, setIsSubmit] = useState(false);
+    const navigate = useNavigate();
 
     const handleInput = (e) => {
         setFormValues(prev => ({
@@ -17,10 +19,18 @@ function RegisterPage() {
         }));
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setFormErrors(Validation(formValues));
-        setIsSubmit(true);
+    const handleSubmit = async () => {
+        try{
+            e.preventDefault();
+            setFormErrors(Validation(formValues));
+            setIsSubmit(true);
+
+            if(Object.keys(formErrors).length === 0 && isSubmit){
+                navigate('/EditProf');
+            }
+        }catch{
+            console.error(error);
+        }
     }
     
     useEffect(() => {
