@@ -1,5 +1,6 @@
 function eValidation(values){
     const errors = {};
+    const userRegex = /^[a-zA-Z0-9_]{3,}$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     const passRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
     const userData = JSON.parse(localStorage.getItem("currentUser"));
@@ -10,6 +11,12 @@ function eValidation(values){
         email: values.email,
         doj: values.doj
     };
+
+    if (!values.username) {
+        errors.username = "Username is required";
+    } else if (!userRegex.test(values.username)) {
+        errors.username = "Invalid username format";
+    }
 
     if (!values.email) {
         errors.email = "Email is required";
@@ -28,14 +35,14 @@ function eValidation(values){
     }
 
     if (userData) {
-        const { email, password } = userData;
+        const { username, email, password } = userData;
 
-        if (email !== values.email || password !== values.password) {
+        if (username !== values.username || email !== values.email || password !== values.password) {
+            localStorage.removeItem(email);
             localStorage.setItem(values.email, JSON.stringify(lsValue));
             return {success: "user Profile Edited"};
-            //need to return to login/delete current user;
         }else{
-            windows.alert("No changes made");
+            Window.alert("No changes made");
         }
     }
 

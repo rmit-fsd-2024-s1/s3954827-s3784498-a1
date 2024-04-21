@@ -4,7 +4,7 @@ function Validation(values){
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     const passRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
     const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
-    const userData = JSON.parse(localStorage.getItem(values.username));
+    const userData = JSON.parse(localStorage.getItem(values.email));
 
     //gotta add a function that deletes currentUser
 
@@ -50,7 +50,7 @@ function Validation(values){
             errors.password = "Password already exists";
         }
     } else if(Object.keys(errors).length === 0){
-        localStorage.setItem(values.username, JSON.stringify(lsValue));
+        localStorage.setItem(values.email, JSON.stringify(lsValue));
         window.alert("User registered successfully!");
     }
 
