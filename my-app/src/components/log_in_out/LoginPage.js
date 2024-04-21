@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import Validation from './LoginValidation';
+import { Link, useNavigate } from 'react-router-dom';
+import LValidation from './LoginValidation';
 
 function LoginPage() {
     const initialValues = { email: "", password: "" };
     const [formValues, setFormValues] = useState(initialValues);
     const [formErrors, setFormErrors] = useState({});
     const [isSubmit, setIsSubmit] = useState(false);
+    const navigate = useNavigate();
 
     const handleInput = (e) => {
         setFormValues(prev => ({
@@ -17,8 +18,12 @@ function LoginPage() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setFormErrors(Validation(formValues));
+        setFormErrors(LValidation(formValues));
         setIsSubmit(true);
+        // If there are no form errors, navigate to the home page
+        if (Object.keys(formErrors).length === 0) {
+            navigate("/");
+        }
     }
 
     useEffect(() => {

@@ -1,7 +1,7 @@
 function LValidation(values){
     const errors = {};
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-    const logData = JSON.parse(localStorage.getItem(values.username));
+    const logData = JSON.parse(localStorage.getItem(values.email));
 
     //gotta add a function that deletes currentUser
 

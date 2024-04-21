@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Validation from './RegisterValidation';
 import { useNavigate } from 'react-router-dom';
 import clean from './cleanSlate';
+import { useHistory } from 'react-router-dom';
 
 function RegisterPage() {
     clean();
@@ -10,6 +11,8 @@ function RegisterPage() {
     const [formValues, setFormValues] = useState(initialValues);
     const [formErrors, setFormErrors] = useState({});
     const [isSubmit, setIsSubmit] = useState(false);
+    const history = useHistory();
+
     const navigate = useNavigate();
 
     const handleInput = (e) => {
@@ -19,18 +22,11 @@ function RegisterPage() {
         }));
     };
 
-    const handleSubmit = async () => {
-        try{
-            e.preventDefault();
-            setFormErrors(Validation(formValues));
-            setIsSubmit(true);
-
-            if(Object.keys(formErrors).length === 0 && isSubmit){
-                navigate('/EditProf');
-            }
-        }catch{
-            console.error(error);
-        }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setFormErrors(Validation(formValues));
+        setIsSubmit(true);
+        history.push("/SignIn");
     }
     
     useEffect(() => {
